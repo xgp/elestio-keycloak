@@ -40,6 +40,7 @@ lifeCycleConfig:
   postBackupCommand: "./scripts/postBackup.sh"
   preRestoreCommand: "./scripts/preRestore.sh"
   postRestoreCommand: "./scripts/postRestore.sh"
+  preDeployCommand: "./scripts/preDeploy.sh"
 webUI:
   - url: "https://[CI_CD_DOMAIN]"
     label: "Admin Console"
