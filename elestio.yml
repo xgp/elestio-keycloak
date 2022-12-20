@@ -28,7 +28,7 @@ config:
   runTime: "dockerCompose"
   version: ""
   framework: ""
-  buildCommand: "docker-compose build"
+  buildCommand: "docker-compose build --pull --no-cache"
   buildDir: "/"
   runCommand: "docker-compose up -d"
   icon: "icon.svg"
