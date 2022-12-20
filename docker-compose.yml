@@ -41,7 +41,7 @@ services:
       - ./keycloak_data:/keycloak_data:rw
     networks:
       - keycloak-network
-    entrypoint: /opt/keycloak/bin/kc.sh --verbose start --auto-build --db=cockroach --spi-email-template-provider=freemarker-plus-mustache --spi-email-template-freemarker-plus-mustache-enabled=true
+    entrypoint: /opt/keycloak/bin/kc.sh --verbose start --spi-email-template-provider=freemarker-plus-mustache --spi-email-template-freemarker-plus-mustache-enabled=true
 
 networks:
   keycloak-network:
