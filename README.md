@@ -11,3 +11,5 @@ You can can open keycloak web UI here:
     https://[CI_CD_DOMAIN]/
     Login: root
     password: [SOFTWARE_PASSWORD] (set in env var)
+
+release bump
