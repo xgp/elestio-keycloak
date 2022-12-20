@@ -41,7 +41,7 @@ services:
       - postgresql
     volumes:
       - ./cache-ispn-jdbc-ping.xml:/opt/keycloak/conf/cache-ispn-jdbc-ping.xml
-      - /var/keycloak/:/var/keycloak/
+      - /keycloak_data:/keycloak_data:rw
     networks:
       - keycloak-network
     entrypoint: /opt/keycloak/bin/kc.sh start --auto-build --spi-email-template-provider=freemarker-plus-mustache --spi-email-template-freemarker-plus-mustache-enabled=true
