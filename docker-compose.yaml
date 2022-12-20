@@ -36,12 +36,11 @@ services:
       - KC_FEATURES=preview,admin2
       - KC_HTTP_RELATIVE_PATH=/auth
       - KC_CACHE_CONFIG_FILE=cache-ispn-jdbc-ping.xml
-      - KC_TRANSACTION_XA_ENABLED=false
     depends_on:
       - postgresql
     volumes:
       - ./cache-ispn-jdbc-ping.xml:/opt/keycloak/conf/cache-ispn-jdbc-ping.xml
-      - /keycloak_data:/keycloak_data:rw
+      - ./keycloak_data:/keycloak_data:rw
     networks:
       - keycloak-network
     entrypoint: /opt/keycloak/bin/kc.sh start --auto-build --spi-email-template-provider=freemarker-plus-mustache --spi-email-template-freemarker-plus-mustache-enabled=true
