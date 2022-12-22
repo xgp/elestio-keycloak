@@ -5,7 +5,6 @@ services:
     restart: always
     env_file:
       - .env
-      - .nebula
     ports:
       - 172.17.0.1:8080:8080
       - $NEBULA_IP:7800:7800
